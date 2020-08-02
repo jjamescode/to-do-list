@@ -7,6 +7,6 @@ PROJECT_BASE_PATH='/usr/local/apps/to-do-list'
 git pull
 $PROJECT_BASE_PATH/env/bin/python manage.py migrate
 $PROJECT_BASE_PATH/env/bin/python manage.py collectstatic --noinput
-supervisorctl restart to_do_list
+supervisorctl restart profiles_api
 
 echo "DONE! :)"
