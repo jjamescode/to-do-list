@@ -1,3 +1,3 @@
 #To Do App
 
-To Do App code demonstration CRUD.
+To Do App code demonstration of CRUD.
