@@ -22,15 +22,14 @@
           {% if things.completed %}
             <tr class="table-secondary">
               <td class="striker"><a href="{% url 'edit' things.id %}">{{things.item }}</a></td>
-              <td><center><a href="{% url 'uncross' things.id %}">Uncross</a></center></td>
-              <td><center><button type="button" class="btn-outline-success"><a href="{% url 'delete' things.id %}">Delete</a></button></center></td>
+              <td><center><button type="button" class="btn btn-warning"><a href="{% url 'uncross' things.id %}">Uncross</a></button></center></td>
+              <td><center><button type="button" class="btn btn-danger"><a href="{% url 'delete' things.id %}">Delete</a></button></center></td>
             </tr>
           {% else %}
             <tr>
               <td><a href="{% url 'edit' things.id %}">{{things.item }}</a></td>
-              <td><center><a href="{% url 'cross_off' things.id %}">Cross Off</a></center></td>
-              <td><center><button type="button" class="btn-outline-success"><a href="{% url 'delete' things.id %}">Delete</a></button></center></td>
-            </tr>
+              <td><center><button type="button" class="btn btn-info"><a href="{% url 'cross_off' things.id %}">Mark Complete</a></center></td>
+              <td><center><button type="button" class="btn btn-danger"><a href="{% url 'delete' things.id %}">Delete</a></button></center></td>
           {% endif %}
         {% endfor %}
     </table>
